@@ -1,0 +1,44 @@
+Product:
+  actAs:
+    Sluggable:
+      fields: [title]
+      name: slug    
+      type: string  
+      length: 255   
+      unique: true
+  columns:
+    id:
+      type: integer(11)
+      primary: true
+      autoincrement: true  
+    title: 
+      type: string(60)
+      notnull: true
+    description: 
+      type: text
+    category_id:
+      type: integer(11)
+  relations:
+    Category:
+      foreignAlias: Products
+      class: Category
+                
+Category:
+  actAs:
+    Sluggable:
+      fields: [title]
+      name: slug    
+      type: string  
+      length: 255   
+      unique: false
+  columns:
+    id:
+      type: integer(11)
+      primary: true
+      autoincrement: true  
+    title: 
+      type: string(60)
+      notnull: true
+    description: 
+      type: text
+      notnull: true

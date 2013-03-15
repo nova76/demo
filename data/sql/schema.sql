@@ -1,0 +1,3 @@
+CREATE TABLE category (id BIGINT AUTO_INCREMENT, title VARCHAR(60) NOT NULL, description text NOT NULL, slug VARCHAR(255), PRIMARY KEY(id)) DEFAULT CHARACTER SET utf8 COLLATE utf8_unicode_ci ENGINE = INNODB;
+CREATE TABLE product (id BIGINT AUTO_INCREMENT, title VARCHAR(60) NOT NULL, description text, category_id BIGINT, slug VARCHAR(255), UNIQUE INDEX product_sluggable_idx (slug), INDEX category_id_idx (category_id), PRIMARY KEY(id)) DEFAULT CHARACTER SET utf8 COLLATE utf8_unicode_ci ENGINE = INNODB;
+ALTER TABLE product ADD CONSTRAINT product_category_id_category_id FOREIGN KEY (category_id) REFERENCES category(id);

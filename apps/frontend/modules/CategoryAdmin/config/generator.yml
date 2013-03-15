@@ -1,0 +1,34 @@
+generator:
+  class: jRollerDoctrineGenerator
+  param:
+    model_class:           Category
+    theme:                 jroller
+    non_verbose_templates: true
+    with_show:             false
+    singular:              ~
+    plural:                ~
+    route_prefix:          category
+    with_doctrine_route:   true
+    actions_base_class:    sfActions
+
+    config:
+      actions: ~
+      fields:  ~
+      list:
+        display: [title, slug]
+        actions:
+          _new:
+            jq_dialogbox : new_dialog  # dialogus ablakban történik a rögzítés
+        object_actions:
+          _show:
+            jq_dialogbox : show_dialog  # dialogus ablakban jelennek meg az adatok
+          _edit:
+            jq_dialogbox : edit_dialog # dialogus ablakban módosítható a rekord
+          _delete:
+            remote : true
+            afterRemote : removeRow # csak a sort törli ki, nem a teljes táblát
+        batch_actions:   []
+      filter:  ~
+      form:    ~
+      edit:    ~
+      new:     ~
