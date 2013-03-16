@@ -1,3 +1,12 @@
+product_Product:
+  class: sfDoctrineRouteCollection
+  options:
+    model:                Product
+    module:               Product
+    prefix_path:          /Product
+    column:               id
+    with_wildcard_routes: true
+
 product:
   class: sfDoctrineRouteCollection
   options:

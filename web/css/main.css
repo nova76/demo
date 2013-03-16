@@ -1,0 +1,10 @@
+.list-product #sf_admin_header{
+    float: left;
+    margin-top: 50px;
+    width: 15%;
+}
+.list-product #sf_admin_content {
+    float: left;
+    width: 85%;
+}
+.ui-menu { width: 90%; }

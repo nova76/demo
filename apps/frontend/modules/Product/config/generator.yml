@@ -1,0 +1,26 @@
+generator:
+  class: jRollerDoctrineGenerator
+  param:
+    model_class:           Product
+    theme:                 jroller
+    non_verbose_templates: true
+    with_show:             false
+    singular:              ~
+    plural:                ~
+    route_prefix:          product_Product
+    with_doctrine_route:   true
+    actions_base_class:    sfActions
+
+    config:
+      actions: ~
+      fields:
+        # az alábbi sor egy kapcsolt tábla szerinti rendezést mutat be
+        Category:  { is_sortable: true, peer: Category, sort: title}
+      list:
+        display: [title, slug, Category]
+        batch_actions:   []
+      filter:  ~
+      form:
+        hide: [slug] # rejtsük el a slugot a formból
+      edit:    ~
+      new: ~
