@@ -1,3 +1,12 @@
+cms:
+  class: sfDoctrineRouteCollection
+  options:
+    model:                Cms
+    module:               CmsAdmin
+    prefix_path:          /CmsAdmin
+    column:               id
+    with_wildcard_routes: true
+
 product_Product:
   class: sfDoctrineRouteCollection
   options:
@@ -24,6 +33,16 @@ category:
     prefix_path:          /CategoryAdmin
     column:               id
     with_wildcard_routes: true
+
+
+cms_slug:
+  url:   /:slug
+  class: cmsDoctrineRoute
+  options: { model: Cms, type: object, method: retrieveBySlug }
+  param: { module: cms, action: show }
+  requirements:  
+    slug: (?:[^?]*) 
+    sf_method: [post, get]     
 
 # You can find more information about this file on the symfony website:
 # http://www.symfony-project.org/reference/1_4/en/10-Routing

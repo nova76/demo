@@ -8,7 +8,10 @@ class ProjectConfiguration extends sfProjectConfiguration
   public function setup()
   {
     $this->enablePlugins('sfDoctrinePlugin',
+                         'RebuildPlugin',
                          'sfAdminThemejRollerPlugin',
-                         'sfJqueryReloadedPlugin');  
+                         'sfDoctrineNestedSetPlugin',
+                         'sfJqueryReloadedPlugin',
+                         'sfFirePHPPlugin');  
   }
 }

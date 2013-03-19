@@ -5,4 +5,13 @@ config/databases.yml
 lib/filter/doctrine/base/*
 lib/form/doctrine/base/*
 lib/model/doctrine/base/*
-
+cc
+build
+rebuild
+load
+save
+save_date
+dump*.sql
+web/sfAdminThemejRollerPlugin
+web/sfDoctrinePlugin
+web/sfJqueryReloadedPlugin

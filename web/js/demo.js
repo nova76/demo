@@ -1,0 +1,3 @@
+  $(function() {
+    $( "#fomenu" ).menu();
+  });

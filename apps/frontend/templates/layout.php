@@ -9,6 +9,14 @@
     <?php include_javascripts() ?>
   </head>
   <body>
-    <?php echo $sf_content ?>
+  
+    <div id="page_header">
+     	<?php include_component('cms', 'menu') ?>
+    </div>
+    <div id="page_content">
+      <?php echo $sf_content ?>
+    </div>
+  
+    
   </body>
 </html>

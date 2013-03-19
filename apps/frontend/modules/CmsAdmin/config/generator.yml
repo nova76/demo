@@ -1,0 +1,35 @@
+generator:
+  class: jRollerDoctrineGenerator
+  param:
+    model_class:           Cms
+    theme:                 jroller
+    non_verbose_templates: true
+    with_show:             false
+    singular:              ~
+    plural:                ~
+    route_prefix:          cms
+    with_doctrine_route:   true
+    actions_base_class:    sfActions
+
+    config:
+      actions: ~
+      fields:  ~
+      list:    
+        layout: nestedset 
+        display: [getTitleWithId]
+        object_actions:
+          _show:      
+            jq_dialogbox : show_dialog      
+          _edit:       
+            jq_dialogbox : edit_dialog      
+          _delete:      
+            remote : true
+            afterRemote : refreshList # or removeRow        
+        batch_actions:   []
+        actions:
+          _new: 
+            jq_dialogbox : new_dialog        
+      filter:  ~
+      form:    ~
+      edit:    ~
+      new:     ~

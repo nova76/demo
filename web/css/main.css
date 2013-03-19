@@ -8,3 +8,25 @@
     width: 85%;
 }
 .ui-menu { width: 90%; }
+
+#page_header{
+    float: left;
+    margin-top: 50px;
+    width: 15%;
+    position:relative;
+}
+#page_content {
+    float: left;
+    width: 85%;
+}
+
+.ui-menu .ui-menu-icon {
+    float: right;
+    position: static;
+}
+
+.ui-menu .ui-menu {
+	margin-top: -3px;
+	z-index: 1000;
+	position: absolute;
+}
