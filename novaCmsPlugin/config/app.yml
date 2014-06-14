@@ -1,3 +1,0 @@
-all:
-  nova_cms:
-    languages: [hu]

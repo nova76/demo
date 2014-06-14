@@ -1,1 +1,0 @@
-<span class="subject" title="<?php echo $mail_template -> description ?>"><?php echo $mail_template -> subject ?> </span>

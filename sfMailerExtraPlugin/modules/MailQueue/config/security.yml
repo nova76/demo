@@ -1,5 +1,0 @@
-batchSend:
-  is_secure: false
-  
-all:
-  credentials: [[ superadmin ]]
